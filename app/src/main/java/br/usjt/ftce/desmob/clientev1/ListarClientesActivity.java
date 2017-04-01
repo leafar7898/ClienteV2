@@ -22,8 +22,9 @@ public class ListarClientesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listar_clientes);
         listView = (ListView) findViewById(R.id.lista_de_clientes);
         final Intent intent = getIntent();
-        String chave = intent.getStringExtra(MainActivity.CHAVE);
-        lista = Data.buscaClientes(chave);
+        ArrayList<Cliente> clientes =(ArrayList<Cliente>) intent.getSerializableExtra(MainActivity.LISTA);
+        lista = clientes.toArray(new Cliente[0]);
+
         BaseAdapter adapter = new ClienteAdapter(this, lista);
         listView.setAdapter(adapter);
 
