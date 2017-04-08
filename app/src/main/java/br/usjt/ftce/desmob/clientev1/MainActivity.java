@@ -61,6 +61,6 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Rede indisponivel", Toast.LENGTH_LONG);
         }
 
-        startActivity(intent);
+        //startActivity(intent);
     }
 }
